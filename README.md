@@ -1,5 +1,5 @@
-# water_drinking_monitor
-Arduino nano project of a hydration monitor that is attached to a water bottle
+# Water Drinking Reminder
+Arduino pro mini project of a water drinking reminder device that is attached to a water bottle.
 
 ### Electrical Components
 - Arduino pro mini 3.3V 8 mHz
