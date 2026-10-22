@@ -2,7 +2,7 @@
 #include <avr/wdt.h>
 #include <avr/interrupt.h>
 
-// D9 -> PB1
+// D13 -> PB5
 
 // States
 const unsigned int HYDRATED = 0;
@@ -72,15 +72,15 @@ void sleep() {
 }
 
 void toggle_led() {
-  PORTB ^= (1 << PB1);  // Pin 9 on Pro Mini is PB1
+  PORTB ^= (1 << PB5);  // Pin 13 on Pro Mini is PB5
 }
 
 void turn_off_led() {
-  PORTB &= ~(1 << PB1);  // Pin 9 on Pro Mini is PB1
+  PORTB &= ~(1 << PB5);  // Pin 13 on Pro Mini is PB5
 }
 
 void turn_on_led() {
-  PORTB |= (1 << PB1);  // Pin 9 on Pro Mini is PB1
+  PORTB |= (1 << PB5);  // Pin 13 on Pro Mini is PB5
 }
 
 void start_dehydrated_state() {
@@ -187,7 +187,7 @@ void setup() {
   ultra_low_power_mode();
 
   // configuring led gpio
-  DDRB |= (1 << PB1);  // set as output
+  DDRB |= (1 << PB5);  // set as output
 
   // watchdog timer config
   wdt_reset();
